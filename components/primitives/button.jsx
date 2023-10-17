@@ -7,14 +7,14 @@ import Link from "next/link";
  * @param {string} [href] - Se definido, o botão será um link.
  * @param {string} [className] - Classes CSS adicionais.
  */
-export const Button = ({ children, className, ...props }) => {
+export const Button = ({ children, className, customWidth, ...props }) => {
    const COMPONENT = props.href ? Link : "button";
 
    return (
       <COMPONENT
          href={props.href}
          type={props.href ? undefined : "button"}
-         className={cn("btn", className)}
+         className={cn("btn", className, customWidth && "custom-button")}
          {...props}
       >
          {children}
