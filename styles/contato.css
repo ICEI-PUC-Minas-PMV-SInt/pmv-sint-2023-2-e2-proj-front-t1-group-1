@@ -1,0 +1,58 @@
+#contact {
+  display: grid;
+  gap: 0.5rem;
+}
+
+@media (min-width: 562px) {
+  #contact {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  #contact div:nth-child(5),
+  #contact div:last-child {
+    grid-column: span 2;
+  }
+}
+
+#contact div {
+  display: flex;
+  flex-direction: column;
+}
+
+#contact div label {
+  font-size: 0.9rem;
+}
+
+#contact div input,
+#contact div textarea {
+  padding: 0.3333333rem;
+}
+
+#contact div textarea {
+  min-height: 225px;
+}
+
+.submit {
+  height: 3.5rem;
+
+  width: 100%;
+  background-color: #29acad;
+  color: white;
+  border: none;
+  padding: 0.6rem;
+}
+
+.submit:hover,
+.submit:focus,
+.submit:focus {
+  background-color: #1e9c9c;
+  font-weight: 600;
+}
+
+/* Embed do Google Maps */
+iframe {
+  min-height: 300px;
+  height: 100%;
+  width: 100%;
+  border: none;
+}
