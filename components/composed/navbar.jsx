@@ -87,7 +87,7 @@ const Links = ({ links }) => {
    return (
       <ul className="navbar-nav mx-auto mb-2 mb-lg-0 fw-medium">
          {links.map((link) => (
-            <li className="nav-item" key={link}>
+            <li className="nav-item" key={link.href}>
                <Link className="nav-link" href={link.href}>
                   {link.name}
                </Link>

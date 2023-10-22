@@ -2,17 +2,12 @@ import Head from "next/head";
 import Image from "next/image";
 import TeamMember from "../components/composed/team-member";
 
-const Home = () => {
+const QuemSomos = () => {
    return (
       <>
          <Head>
             <title>Mãos Solidárias</title>
             <meta name="description" content="PUC Minas" />
-            <meta
-               name="viewport"
-               content="width=device-width, initial-scale=1"
-            />
-            <link rel="icon" href="/favicon.ico" />
          </Head>
          <Missao />
          <Valores />
@@ -176,4 +171,4 @@ const Time = () => (
   
 
 
-export default Home;
+export default QuemSomos;
