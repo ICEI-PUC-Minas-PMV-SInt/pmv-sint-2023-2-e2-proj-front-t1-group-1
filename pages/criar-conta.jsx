@@ -16,8 +16,8 @@ const Login = () => {
                alt="Mãos Solidárias"
             />
          </Link>
-        <h1 className="title">Login</h1>
-        <p>Selecione a forma de acesso:</p>
+        <h1 className="title">Crie sua conta!</h1>
+        <p>Cadastre-se com uma rede:</p>
         <div className="box-social-media">
           <div className="button-media">
           <Image
@@ -38,7 +38,7 @@ const Login = () => {
             <p>Facebook</p>
           </div>
         </div>
-        <p>ou continue com seu e-mail cadastrado</p>
+        <p>ou cadastre-se com um email:</p>
         <div className="form-floating input-float my-3">
           <input type="text" className="form-control" id="inputCPF" placeholder="Seu E-mail" />
           <label className="label-float" for="inputCPF">E-mail</label>
@@ -51,9 +51,8 @@ const Login = () => {
         <div className="remember-me">
           <div className="form-check form-check-inline checkbox-payment">
             <input className="form-check-input" type="checkbox" id="check-payment" value="option1" />
-            <label className="form-check-label" for="check-payment">Lembre-me</label>
+            <label className="form-check-label" for="check-payment">Receber nossas atualizações</label>
           </div>
-          <p>Esqueci minha senha</p>
         </div>
         <Link href="/Login">
          <Button
