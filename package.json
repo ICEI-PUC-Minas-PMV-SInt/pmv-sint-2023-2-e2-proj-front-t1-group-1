@@ -18,10 +18,5 @@
   "devDependencies": {
     "eslint": "^8",
     "eslint-config-next": "13.5.4"
-  },
-  "description": "`CURSO` Tecnologia em Sistemas para Internet.",
-  "main": "next.config.js",
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  }
 }
