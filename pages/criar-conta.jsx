@@ -64,7 +64,7 @@ const Login = () => {
          </Button>
       </Link>
         <p className="account">
-          Não tem uma conta? <a style={{ textDecoration: 'none' }} href="criar-conta.html"><span>Criar uma nova conta</span></a>
+          Já tem uma conta? <a style={{ textDecoration: 'none' }} href="criar-conta.html"><span>Entrar na minha conta</span></a>
         </p>
       </div>
 
