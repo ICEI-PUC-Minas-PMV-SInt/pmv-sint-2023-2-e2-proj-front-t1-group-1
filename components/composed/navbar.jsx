@@ -19,10 +19,6 @@ const menus = [
       href: "/nossos-eventos",
    },
    {
-      name: "Notícias",
-      href: "/noticias",
-   },
-   {
       name: "Contatos",
       href: "/contato",
    },

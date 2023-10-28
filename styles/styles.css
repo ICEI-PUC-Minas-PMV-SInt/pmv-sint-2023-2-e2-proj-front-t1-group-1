@@ -183,3 +183,24 @@ footer img {
   display: block;
   border-bottom: 3px solid #f8546a;
 }
+
+.event-category {
+  text-align: center;
+  display: block;
+  padding: .5rem 1rem;
+  border-radius: 1rem;
+  color: black;
+  text-decoration: none!important;
+}
+
+.event-category:hover {
+  background-color: var(--bs-gray-100)
+}
+
+.event-category > div {
+  width: 100px;
+  height: 100px;
+  background-color: var(--bs-gray-300);
+  margin: auto auto 1rem auto;
+  border-radius: 100%;
+}
