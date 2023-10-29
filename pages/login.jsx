@@ -64,9 +64,13 @@ const Login = () => {
             Entrar
          </Button>
       </Link>
-        <p className="account">
-          Não tem uma conta? <a style={{ textDecoration: 'none' }} href="criar-conta.html"><span>Criar uma nova conta</span></a>
+   
+      <p className="account">
+          Não tem uma conta? <a style={{ textDecoration: 'none' }} href="criar-conta.html">
+          <Link href="/criar-conta" className='link'><span>Criar uma nova conta</span></Link></a>
         </p>
+      
+      
       </div>
 
       <div className="col-lg-7 col-sm-12 bg-success box-image">

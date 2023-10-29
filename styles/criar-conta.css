@@ -167,6 +167,10 @@ input.form-control:-webkit-autofill:active {
   cursor: pointer;
 }
 
+.link {
+  text-decoration: none;
+}
+
 @media (min-width: 576px) {
   .box-social-media {
     flex-direction: row;
