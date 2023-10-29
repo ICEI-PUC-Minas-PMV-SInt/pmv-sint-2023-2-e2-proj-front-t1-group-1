@@ -65,7 +65,7 @@ const Login = () => {
       </Link>
     
         <p className="account">
-          Já tem uma conta? <a style={{ textDecoration: 'none' }} href="criar-conta.html">  <Link href="/login" className='link'><span>Entrar na minha conta</span> </Link></a>
+          <Link href="/login" className='link'><span>Entrar na minha conta</span> </Link>
         </p>
      
       
