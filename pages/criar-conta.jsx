@@ -65,7 +65,7 @@ const Login = () => {
       </Link>
     
         <p className="account">
-          <Link href="/login" className='link'><span>Entrar na minha conta</span> </Link>
+          <Link href="/login" className='link'><span>Já tenho uma conta!</span> </Link>
         </p>
      
       

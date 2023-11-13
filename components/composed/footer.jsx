@@ -62,7 +62,7 @@ const Categories = () => {
 const Access = () => {
    const access = [
       {
-         name: "Caadastrar",
+         name: "Cadastrar",
          href: "/criar-conta",
       },
       {

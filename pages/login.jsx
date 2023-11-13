@@ -2,6 +2,7 @@ import React from 'react';
 import Link from "next/link";
 import { Button } from '@/components/primitives/button';
 import Image from 'next/image';
+import { Title } from '@/components/primitives/title/style';
 
 const Login = () => {
     return (
@@ -16,7 +17,9 @@ const Login = () => {
                alt="Mãos Solidárias"
             />
          </Link>
-        <h1 className="title">Login</h1>
+        <Title>
+          Entrar
+        </Title>
         <p>Selecione a forma de acesso:</p>
         <div className="box-social-media">
           <div className="button-media">
@@ -67,7 +70,7 @@ const Login = () => {
    
       <p className="account">
           Não tem uma conta?
-          <Link href="/criar-conta" className='link'><span>Criar uma nova conta</span></Link>
+          <Link href="/criar-conta" className='link'><span> Criar uma nova conta</span></Link>
         </p>
       
       

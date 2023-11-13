@@ -1,10 +1,13 @@
 import { Button } from "@/components/primitives/button";
+import { Title } from "@/components/primitives/title/style";
 
 const Contato = () => {
     return (
         <main className="container-xl row row-cols-lg-2 mx-auto align-content-center my-5">
         <section className="order-lg-1">
-          <h1 style={{fontSize: '2.5rem'}}>Envie sua mensagem</h1>
+          <Title marginTop='0'>
+            Envie sua mensagem!
+          </Title>
           <form id="contact" className="input-group">
             <div>
               <label>Nome</label>
