@@ -24,6 +24,24 @@ body {
   font-weight: 600;
 }
 
+.btn-primary {
+  background-color: #f8475e;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #f8546a;
+}
+
+.btn-main {
+  margin: 2rem 0 0 0;
+  width: 140px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .custom-button {
   width: 100%;
   padding: 1rem 0;
