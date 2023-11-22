@@ -1,6 +1,6 @@
 import { Button } from "@/components/primitives/button";
 import { Title } from "@/components/primitives/title/style";
-import FormCont from "@/components/composed/form-cont";
+import Input from "@/components/primitives/input/input";
 
 const Contato = () => {
   return (
@@ -8,51 +8,32 @@ const Contato = () => {
       <section className="order-lg-1">
         <Title marginTop="0">Envie sua mensagem!</Title>
 
-        {/* Original sem componente
-
-          <form id="contact" className="input-group">
-            <div>
-              <label>Nome</label>
-              <input type="text" className="form-control" placeholder="Seu nome" />
-            </div>
-            <div>
-              <label>E-mail</label>
-              <input type="text" className="form-control" placeholder="seu-email@email.com" />
-            </div>
-            <div>
-              <label>Celular</label>
-              <input type="text" className="form-control" placeholder="(99) 99999-9999" />
-            </div>
-            <div>
-              <label>Assunto</label>
-              <input type="text" className="form-control" placeholder="Ex: Ser doador" />
-            </div>
-            <div>
-              <label>Mensagem</label>
-              <textarea className="form-control" placeholder="Sua mensagem aqui..."></textarea>
-            </div>
-          </form>
-        */}
-
-
-        {/* Início do componente */}
-
         <form id="contact" className="my-3">
-          <FormCont 
-          type="text" 
-          information="Nome" />
-
-          <FormCont 
-          type="email" 
-          information="E-mail" />
-
-          <FormCont 
-          type="text" 
-          information="Celular" />
-
-          <FormCont 
-          type="text" 
-          information="Assunto" />
+        <Input
+            type="text"
+            id="nome"
+            placeholder=""
+            information="Nome"
+          />
+        <Input
+            type="text"
+            id="e-mail"
+            placeholder=""
+            information="E-mail"
+          />
+        <Input
+            type="text"
+            id="celular"
+            placeholder=""
+            information="Celular"
+          />
+        <Input
+            type="text"
+            id="assunto"
+            placeholder=""
+            information="Assunto"
+          />
+        
 
           <div className="form-floating input-float my-1">
             <textarea
@@ -60,7 +41,7 @@ const Contato = () => {
               placeholder="Sua mensagem aqui...">
             </textarea>
 
-            <label className="label-float" for="message">
+            <label className="label-float" htmlFor="message">
               Mensagem
             </label>
           </div>

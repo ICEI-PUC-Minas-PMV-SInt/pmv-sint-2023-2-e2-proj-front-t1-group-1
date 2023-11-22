@@ -43,7 +43,7 @@ export const EventCard = ({
                   aria-valuenow="0"
                ></div>
             </div>
-            <Button className="btn btn-primary">Doar</Button>
+            <Button customWidth className="btn btn-primary">Doar</Button>
          </div>
       </Button>
    );

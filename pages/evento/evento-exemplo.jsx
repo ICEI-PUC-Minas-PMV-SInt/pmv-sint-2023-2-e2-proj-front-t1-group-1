@@ -110,7 +110,7 @@ const Stats = () => {
          </div>
          <div className="row px-4 align-items-center">
             <a href="#" className="btn btn-primary col-10">
-               Doar
+               Doar teste
             </a>
             <button className="btn col-2">
                <Image

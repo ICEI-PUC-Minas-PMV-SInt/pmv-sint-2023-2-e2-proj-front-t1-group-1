@@ -37,7 +37,7 @@ const Main = () => {
                Todos nós podemos ser afetados, ajude-nos a oferecer suporte às
                pessoas que precisam.
             </p>
-            <div className="d-flex gap-3 justify-content-center justify-content-lg-start">
+            <div className="d-flex justify-content-center justify-content-lg-start">
                <Button href="#" className="btn btn-primary btn-main">
                   Doar agora
                </Button>

@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Button } from "@/components/primitives/button";
 import Image from "next/image";
 import { Title } from "@/components/primitives/title/style";
-import Form from "@/components/composed/form";
+import Form from "@/components/primitives/input/input";
 
 const Login = () => {
   return (

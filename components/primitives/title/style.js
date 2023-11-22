@@ -7,6 +7,6 @@ export const Title = styled.h1`
   color: #8c8c8c;
 
   @media (min-width: 576px) {
-    margin-top: ${props => props.marginTop || "1.5rem"};
+    margin-top: ${(props) => props.marginTop || "1.5rem"};
   }
 `;
