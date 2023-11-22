@@ -29,7 +29,7 @@
 }
 
 #contact div textarea {
-  min-height: 225px;
+  min-height: 180px;
 }
 
 .submit {
@@ -51,8 +51,17 @@
 
 /* Embed do Google Maps */
 iframe {
-  min-height: 300px;
+  min-height: 350px;
   height: 100%;
   width: 100%;
   border: none;
+}
+
+input.form-control:-webkit-autofill,
+input.form-control:-webkit-autofill:hover,
+input.form-control:-webkit-autofill:focus,
+input.form-control:-webkit-autofill:active {
+  -webkit-box-shadow: none;
+
+  transition: background-color 5000s ease-in-out 0s;
 }
