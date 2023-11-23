@@ -1,7 +1,8 @@
   import React from "react";
-  import * as S from "./input.js";
+  import * as S from "./style";
 
-  const Input = ({ type, name, placeholder, information }) => (
+  export const InputFloat = ({ type, name, placeholder, information }) => (
+    
     <S.InputFloat >
       <div className="form-floating input-float  my-3">
         <input
@@ -18,5 +19,3 @@
       </div>
     </S.InputFloat>
   );
-
-  export default Input;

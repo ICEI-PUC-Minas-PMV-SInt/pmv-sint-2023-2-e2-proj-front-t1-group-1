@@ -113,41 +113,57 @@ const Events = () => {
          title: "Incêndio em Poços de Caldas",
          description: "Contibua com o que puder para sanar os danos",
          img: "incendio_01.jpg",
+         goal: 200   ,  
+         donated: 200,
       },
       {
          title: "Incêndio na Comunidade",
          description: "Faça uma doação agora e ajude as comunidades afetadas",
          img: "incendio_02.jpg",
+         goal: 200   ,
+         donated: 20,
       },
       {
          title: "Ajude o Cerrado",
          description: "Faça uma doação agora e ajude as comunidades afetadas",
          img: "incendio_03.jpg",
+         goal: 200   ,
+         donated: 20,
       },
       {
          title: "Apoie a Natureza",
          description: "Faça uma doação agora e ajude as comunidades afetadas",
          img: "incendio_04.jpg",
+         goal: 200   ,
+         donated: 20,
       },
       {
          title: "Ajude vítimas na Bahia",
          description: "Faça uma doação agora e ajude as comunidades afetadas",
          img: "incendio_05.jpeg",
+         goal: 200   ,
+         donated: 20,
       },
       {
          title: "Não abandone SP",
          description: "Faça uma doação agora e ajude as comunidades afetadas",
          img: "incendio_06.png",
+         goal: 200   ,
+         donated: 20,
       },
       {
          title: "#ContraQueimadas",
          description: "Faça uma doação agora e ajude as comunidades afetadas",
          img: "incendio_07.jpg",
+         goal: 200   ,
+         donated: 20,
       },
       {
          title: "Ajude o Pará",
          description: "Faça uma doação agora e ajude as comunidades afetadas",
          img: "incendio_08.jpg",
+         goal: 100   ,
+         donated: 50,
       },
    ];
 
@@ -162,6 +178,8 @@ const Events = () => {
                   description={event.description}
                   img={event.img}
                   alt={event.title}
+                  goal={event.goal}
+                  donated={event.donated}
                >
                   {event.description}
                </EventCard>
@@ -178,6 +196,7 @@ const News = () => {
          date: "12/04/2023",
          img: "enchente_01.jpg",
          href: "/noticias",
+         
       },
       {
          title: "Seca no Nordeste",

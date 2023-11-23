@@ -10,7 +10,12 @@ export const EventCard = ({
    href = "#",
    tags,
    className,
+   goal,
+   donated
 }) => {
+
+   let progress = (donated / goal) * 100;
+
    return (
       <Button href={href} className={cn("event-item", className)}>
          {img && (
@@ -27,22 +32,15 @@ export const EventCard = ({
             <h3>{title}</h3>
             <p className="description-card">{children}</p>
             <div className="event-amount justify-content-center justify-content-md-between flex-column flex-md-row">
-               <div className="valores"></div>
+            <div className="valores">
+               <p>{`Meta: R$ ${goal.toFixed(2)}`}</p>
+               <p>{`Arrecadado: R$ ${donated.toFixed(2)}`}</p>
+            </div>
                <div>Incêndios</div>
             </div>
-            <div
-               className="progress"
-               role="progressbar"
-               aria-label="Arrecadados"
-               aria-valuemax="100"
-            >
-               <div
-                  className="progress-bar"
-                  role="progressbar"
-                  style={{ width: "0%" }}
-                  aria-valuenow="0"
-               ></div>
-            </div>
+            <div className="progress" role="progressbar" aria-label="Arrecadados" aria-valuemax="100">
+            <div className="progress-bar" role="progressbar" style={{ width: `${progress}%`, backgroundColor: '#73A580' }} aria-valuenow={progress}></div>
+          </div>
             <Button customWidth className="btn btn-primary">Doar</Button>
          </div>
       </Button>

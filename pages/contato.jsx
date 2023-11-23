@@ -1,6 +1,6 @@
 import { Button } from "@/components/primitives/button";
+import { InputFloat } from "@/components/primitives/input/input";
 import { Title } from "@/components/primitives/title/style";
-import Input from "@/components/primitives/input/input";
 
 const Contato = () => {
   return (
@@ -9,27 +9,31 @@ const Contato = () => {
         <Title marginTop="0">Envie sua mensagem!</Title>
 
         <form id="contact" className="my-3">
-        <Input
+        <InputFloat
             type="text"
             id="nome"
+            name="nome"
             placeholder=""
             information="Nome"
           />
-        <Input
+        <InputFloat
             type="text"
             id="e-mail"
+            name="e-mail"
             placeholder=""
             information="E-mail"
           />
-        <Input
+        <InputFloat
             type="text"
             id="celular"
+            name="celular"
             placeholder=""
             information="Celular"
           />
-        <Input
+        <InputFloat
             type="text"
             id="assunto"
+            name="assunto"
             placeholder=""
             information="Assunto"
           />
