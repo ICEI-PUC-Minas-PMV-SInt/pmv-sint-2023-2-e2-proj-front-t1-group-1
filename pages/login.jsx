@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Button } from "@/components/primitives/button";
 import Image from "next/image";
 import { Title } from "@/components/primitives/title/style";
-import Form from "@/components/primitives/input/input";
+import { InputFloat } from "@/components/primitives/input/input";
 
 const Login = () => {
   return (
@@ -11,7 +11,7 @@ const Login = () => {
       <div className="row">
         <div className="col-lg-5 col-sm-12 create">
           <Link href="/">
-            <Image
+            <Image className="logo"
               src="/assets/maos.png"
               width={56}
               height={56}
@@ -21,28 +21,28 @@ const Login = () => {
           <Title>Entrar</Title>
           <p>Selecione a forma de acesso:</p>
           <div className="box-social-media">
-            <div className="button-media">
-              <Image
+            <button className="button-media">
+              <Image className="icon-media-gmail"
                 src="/assets/gmail.png"
                 width={20}
                 height={20}
                 alt="logo gmail"
               />
               <p>Google</p>
-            </div>
-            <div className="button-media">
-              <Image
+            </button>
+            <button className="button-media">
+              <Image className="icon-media-facebook"
                 src="/assets/facebook.png"
                 width={20}
                 height={20}
                 alt="logo facebook"
               />
               <p>Facebook</p>
-            </div>
+            </button>
           </div>
           <p>ou continue com seu e-mail cadastrado</p>
 
-        {/* Original sem componente
+        {/* Original sem componente--------------------------------------------------------------------
         
         
         <div className="form-floating input-float my-3">
@@ -56,23 +56,23 @@ const Login = () => {
         </div> */}
 
 
-        {/* Início do componente */}
+        {/* Início do componente-------------------------------------------------------------------- */}
 
-          <Form
+          <InputFloat
             type="text"
             id="inputCPF"
             placeholder="Seu E-mail"
             information="E-mail"
           />
 
-          <Form
+          <InputFloat
             type="password"
             id="password"
             placeholder="Sua senha"
             information="Senha"
           />
 
-        {/* Fim do componente */}
+        {/* Fim do componente---------------------------------------------------------------------- */}
 
 
 
@@ -100,17 +100,17 @@ const Login = () => {
             </Button>
           </Link>
 
-          <p className="account">
+          <div className="account">
             Não tem uma conta?
             <Link href="/criar-conta" className="link">
-              <span> Criar uma nova conta</span>
+              <p className="acc-crt-exs"> Criar uma nova conta</p>
             </Link>
-          </p>
+          </div>
         </div>
 
         <div className="col-lg-7 col-sm-12 bg-success box-image">
-          <h2>Juntos, transformamos</h2>
-          <h2>dor em esperança!</h2>
+            <h2>Juntos, transformamos</h2>
+            <h2>dor em esperança!</h2>
           <p>Acesse sua conta agora para acompanhar suas doações!</p>
         </div>
       </div>

@@ -18,6 +18,12 @@ p {
 .logo {
   width: 56px;
   height: 56px;
+  margin-bottom: 10px;
+}
+
+.logo:hover {
+  transition: 0.7s;
+  transform: scale(1.1) rotate(360deg);
 }
 
 /* .title {
@@ -40,18 +46,43 @@ p {
   column-gap: 1rem;
   justify-content: center;
   align-items: center;
+  text-decoration: none;
+  color: inherit;
+  background-color: #fff;
   border: 0.5px solid #8c8c8c;
   border-radius: 8px;
   /* box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px; */
+}
+
+.button-media:hover {
+  transition: 0.3s;
+  background-color: #f6f6f6;
+  transform: scale(1.02);
+}
+
+.button-media:hover .icon-media-gmail {
+  transition: 1s;
+  transform: rotate(360deg);
+}
+
+.button-media:hover .icon-media-facebook {
+  transition: 1s;
+  transform: rotate(360deg);
 }
 
 .icon-media-gmail {
   width: 20px;
   height: 20px;
 }
+
 .icon-media-facebook {
   width: 24px;
   height: 24px;
+}
+
+.icon-media-facebook:hover {
+  transition: 1s;
+  transform: rotate(360deg);
 }
 
 .form-check-input {
@@ -110,7 +141,14 @@ p {
   font-size: 1.25rem;
   border-radius: 0.25rem;
 }
-.button-login:hover {
+
+.btn-login {
+  background-color: #f8475e;
+}
+
+.btn-login:hover {
+  transform: scale(1.02);
+  transition: 0.3s;
   background-color: #df3f54;
 }
 
@@ -128,22 +166,35 @@ p {
   color: #29acad;
   font-weight: 500;
   cursor: pointer;
+  transition: 0.3s;
+  transform: scale(1.02);
 }
 
 .account {
   text-align: center;
   padding: 1rem 0;
+  display: flex;
+  justify-content: center;
 }
 
-.account span {
+.acc-crt-exs {
   color: #29acad;
   font-weight: 600;
   cursor: pointer;
+  margin-left: 5px;
 }
 
-.link {
+.acc-crt-exs:hover {
+  transition: 0.3s;
+  transform: scale(1.02);
+}
+
+.link{
   text-decoration: none;
 }
+
+
+
 
 @media (min-width: 576px) {
   .box-social-media {

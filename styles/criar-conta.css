@@ -20,11 +20,11 @@ p {
   height: 56px;
 }
 
-.title {
+/* .title {
   margin-top: 1.5rem;
   font-weight: 700;
   padding-bottom: 1rem;
-}
+} */
 
 .box-social-media {
   display: flex;

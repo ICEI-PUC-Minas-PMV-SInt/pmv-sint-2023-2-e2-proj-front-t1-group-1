@@ -2,6 +2,9 @@ import React from 'react';
 import Link from "next/link";
 import { Button } from '@/components/primitives/button';
 import Image from 'next/image';
+import { Title } from "@/components/primitives/title/style";
+import { InputFloat } from "@/components/primitives/input/input";
+
 
 const Login = () => {
     return (
@@ -9,36 +12,40 @@ const Login = () => {
     <div className="row">
       <div className="col-lg-5 col-sm-12 create">
       <Link href="/">
-            <Image
+            <Image className='logo'
                src="/assets/maos.png"
                width={56}
                height={56}
                alt="Mãos Solidárias"
             />
          </Link>
-        <h1 className="title">Crie sua conta!</h1>
+         <Title>Crie sua conta!</Title>
+        {/* <h1 className="title">Crie sua conta!</h1> */}
         <p>Cadastre-se com uma rede:</p>
         <div className="box-social-media">
-          <div className="button-media">
-          <Image
+          <button className="button-media">
+          <Image className="icon-media-gmail"
                src="/assets/gmail.png"
                width={20}
                height={20}
                alt="logo gmail"
             />
             <p>Google</p>
-          </div>
-          <div className="button-media">
-          <Image
+          </button>
+          <button className="button-media">
+          <Image className="icon-media-facebook"
                src="/assets/facebook.png"
                width={20}
                height={20}
                alt="logo facebook"
             />
             <p>Facebook</p>
-          </div>
+          </button>
         </div>
         <p>ou cadastre-se com um email:</p>
+        {/*  Original sem componente--------------------------------------------------------------------
+        
+        
         <div className="form-floating input-float my-3">
           <input type="text" className="form-control" id="inputCPF" placeholder="Seu E-mail" />
           <label className="label-float" for="inputCPF">E-mail</label>
@@ -47,7 +54,26 @@ const Login = () => {
         <div className="form-floating input-float">
           <input type="password" className="form-control" id="password" placeholder="Senha" />
           <label className="label-float" for="password">Senha</label>
-        </div>
+        </div> */}
+
+        {/* Início do componente-------------------------------------------------------------------- */}
+
+        <InputFloat
+            type="text"
+            id="inputCPF"
+            placeholder="Seu E-mail"
+            information="E-mail"
+          />
+
+          <InputFloat
+            type="password"
+            id="password"
+            placeholder="Sua senha"
+            information="Senha"
+          />
+
+        {/* Fim do componente---------------------------------------------------------------------- */}
+
         <div className="remember-me">
           <div className="form-check form-check-inline checkbox-payment">
             <input className="form-check-input" type="checkbox" id="check-payment" value="option1" />
@@ -64,9 +90,10 @@ const Login = () => {
          </Button>
       </Link>
     
-        <p className="account">
-          <Link href="/login" className='link'><span>Já tenho uma conta!</span> </Link>
-        </p>
+        <div className="account">
+          <Link href="/login" className='link'>
+            <p className="acc-crt-exs">Já tenho uma conta!</p> </Link>
+        </div>
      
       
       </div>
