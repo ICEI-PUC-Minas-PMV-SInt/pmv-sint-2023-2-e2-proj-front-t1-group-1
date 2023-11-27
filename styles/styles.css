@@ -30,6 +30,8 @@ body {
 }
 
 .btn-primary:hover {
+  transition: 0.3s;
+  transform: scale(1.04);
   background-color: #f8546a;
 }
 
@@ -222,3 +224,17 @@ footer img {
   margin: auto auto 1rem auto;
   border-radius: 100%;
 }
+
+
+#ver-mais {
+  width: 150px;
+  padding: 0.8rem;
+  font-size: 1rem;
+}
+
+.part:hover {
+  cursor: pointer;
+  transition: 0.4s;
+  transform: scale(1.2);
+}
+

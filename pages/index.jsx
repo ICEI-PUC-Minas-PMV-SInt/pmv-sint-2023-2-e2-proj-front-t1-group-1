@@ -230,7 +230,7 @@ const News = () => {
             ))}
          </div>
          <div className="text-center mt-4">
-            <a href="#" className="btn btn-primary fs-5 fw-600" id="ver-mais">
+            <a href="#" className="btn btn-primary fw-600" id="ver-mais">
                Ver mais {"->"}
             </a>
          </div>
@@ -253,7 +253,7 @@ const Partners = () => {
                   alt="Parceiro"
                   width={200}
                   height={20}
-                  className="d-block"
+                  className="d-block part"
                />
             ))}
          </div>
