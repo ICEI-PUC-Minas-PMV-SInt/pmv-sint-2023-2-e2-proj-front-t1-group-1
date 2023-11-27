@@ -43,41 +43,59 @@ const Cards = () => {
          title: "Incêndio em Poços de Caldas",
          description: "Contibua com o que puder para sanar os danos",
          img: "incendio_01.jpg",
+         goal: 100,
+         donated: 50,
       },
       {
          title: "Incêndio na Comunidade",
          description: "Faça uma doação agora e ajude as comunidades afetadas",
          img: "incendio_02.jpg",
+         goal: 100,
+         donated: 50,
       },
       {
          title: "Ajude o Cerrado",
          description: "Faça uma doação agora e ajude as comunidades afetadas",
          img: "incendio_03.jpg",
+         goal: 100,
+         donated: 50,
       },
       {
          title: "Apoie a Natureza",
          description: "Faça uma doação agora e ajude as comunidades afetadas",
          img: "incendio_04.jpg",
+         goal: 100,
+         donated: 50,
       },
       {
          title: "Ajude vítimas na Bahia",
          description: "Faça uma doação agora e ajude as comunidades afetadas",
          img: "incendio_05.jpeg",
+         goal: 100,
+         donated: 50,
       },
       {
          title: "Não abandone SP",
          description: "Faça uma doação agora e ajude as comunidades afetadas",
          img: "incendio_06.png",
+         goal: 100,
+         donated: 50,
       },
       {
          title: "#ContraQueimadas",
          description: "Faça uma doação agora e ajude as comunidades afetadas",
          img: "incendio_07.jpg",
+         goal: 100,
+         donated: 50,
+         
       },
       {
          title: "Ajude o Pará",
          description: "Faça uma doação agora e ajude as comunidades afetadas",
          img: "incendio_08.jpg",
+         goal: 100,
+         donated: 50,
+         
       },
    ];
 
@@ -92,6 +110,8 @@ const Cards = () => {
                   img={event.img}
                   alt={event.title}
                   href="/evento/evento-exemplo"
+                  goal={event.goal}
+                  donated={event.donated}
                >
                   {event.description}
                </EventCard>
