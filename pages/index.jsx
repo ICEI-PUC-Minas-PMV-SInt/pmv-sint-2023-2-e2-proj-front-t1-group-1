@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { EventCard } from "@/components/composed/event-card";
 import { NewsCard } from "@/components/composed/news-card";
+import { Title } from "@/components/primitives/title/style";
 
 const Home = () => {
    return (
@@ -15,24 +16,24 @@ const Home = () => {
                name="viewport"
                content="width=device-width, initial-scale=1"
             />
-            <link rel="icon" href="/favicon.ico" />
+            <link rel="icon" href="/maos.ico" />
          </Head>
          <Main />
+         <Partners />
          <Stats />
          <Events />
          <News />
-         <Partners />
       </>
    );
 };
 
 const Main = () => {
    return (
-      <main className="container-xl row mx-auto text-center text-lg-start content-main">
+      <main className="container-fluid row container-home my-0 mb-5">
          <div className="my-auto col-12 col-lg-6 sm-mt-3">
-            <h1 className="title-main">
-               Desastres naturais não escolhem suas vítimas!
-            </h1>
+            <Title sizeFont={'3rem'}>
+               Desastres naturais não escolhem suas vítimas.
+            </Title>
             <p className="description-main">
                Todos nós podemos ser afetados, ajude-nos a oferecer suporte às
                pessoas que precisam.
@@ -43,14 +44,14 @@ const Main = () => {
                </Button>
             </div>
          </div>
-         <div className="col-lg-6">
+         <div className="col-lg-6 text-center">
             <Image
-               src="/assets/imagem-capa.gif"
+               src="/assets/capa.svg"
                alt="Desastres naturais"
                id="solidarity"
-               className="mx-auto"
-               width={500}
-               height={500}
+               width={550} 
+               height={550} 
+               // layout="responsive"  
             />
          </div>
       </main>
@@ -82,7 +83,7 @@ const Stats = () => {
    ];
 
    return (
-      <section id="stats" className="container-fluid bg-secondary-subtle py-4">
+      <section id="stats" className="container-fluid py-4">
          <div className="container-xl mx-auto row row-cols-auto justify-content-start justify-content-sm-around row-gap-3">
             {stats.map((stat) => (
                <div
@@ -242,20 +243,30 @@ const Partners = () => {
    return (
       <section
          id="partners"
-         className="container-fluid bg-secondary-subtle py-4 mb-4"
+         className="container-fluid py-2 mb-5"
       >
-         <h2 className="text-center mb-4">Parceiros</h2>
+
          <div className="container-xl mx-auto row row-cols-auto justify-content-between justify-content-sm-around row-gap-3 fw-bold fs-5">
-            {[...Array(5)].map((k, v) => (
-               <Image
-                  key={v}
-                  src={`/assets/parceiro${v + 1}.png`}
-                  alt="Parceiro"
-                  width={200}
-                  height={20}
-                  className="d-block part"
-               />
-            ))}
+         {[...Array(5)].map((_, v) => (
+      <div key={v} className="d-block part">
+        <Image
+          src={`/assets/parceiro${v + 1}.svg`}
+          alt={`Parceiro ${v + 1}`}
+          width={150}
+          height={40}
+          className="part1"
+
+        />
+        <Image
+          src={`/assets/part${v + 1}.svg`}
+          alt={`Parceiro ${v + 1}`}
+          width={150}
+          height={40}
+          className="part2"
+
+        />
+      </div>
+    ))}
          </div>
       </section>
    );

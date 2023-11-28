@@ -28,7 +28,7 @@ export const Navbar = () => {
    return (
       <header>
          <nav className="navbar navbar-expand-md">
-            <div className="container-xl">
+            <div className="container-fluid container-navbar">
                <LeftSide />
                <div className="collapse navbar-collapse" id="navbarMenu">
                   <Links links={menus} />
