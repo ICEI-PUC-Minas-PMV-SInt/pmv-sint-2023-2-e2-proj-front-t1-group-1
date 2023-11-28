@@ -244,21 +244,49 @@ footer img {
   font-size: 1rem;
 }
 
+#partners {
+  height: 4rem;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 2rem 6rem;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
 .part2 {
   display: none;
 }
 .part {
   cursor: pointer;
   transition: 0.8s;
+  padding: 0.5rem 0.8rem;
 }
 
 .part:hover {
   transition: 0.8s;
   transform: scale(1.1);
+  padding: 0.5rem 0.8rem;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 64px -10px;
 }
 .part:hover .part1 {
   display: none;
 }
 .part:hover .part2 {
   display: block;
+}
+
+@media (max-width: 798px) {
+  .container-navbar,
+  .container-home,
+  #partners {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  #partners {
+    height: auto;
+  }
 }

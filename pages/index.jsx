@@ -246,7 +246,7 @@ const Partners = () => {
          className="container-fluid py-2 mb-5"
       >
 
-         <div className="container-xl mx-auto row row-cols-auto justify-content-between justify-content-sm-around row-gap-3 fw-bold fs-5">
+
          {[...Array(5)].map((_, v) => (
       <div key={v} className="d-block part">
         <Image
@@ -267,7 +267,7 @@ const Partners = () => {
         />
       </div>
     ))}
-         </div>
+  
       </section>
    );
 };
