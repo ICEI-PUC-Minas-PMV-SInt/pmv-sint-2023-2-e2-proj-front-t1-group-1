@@ -93,7 +93,10 @@ body {
 }
 
 .content-card .description-card {
-  font-size: 0.8rem;
+  font-size: 14px;
+  text-align: start;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 .content-card .event-amount {
@@ -245,7 +248,6 @@ footer img {
 }
 
 #partners {
-  height: 4rem;
   display: flex;
   width: 100%;
   justify-content: space-between;
@@ -278,15 +280,38 @@ footer img {
   display: block;
 }
 
+#stats {
+  background-color: #fafafa;
+  padding: 2rem 6rem 4rem 6rem;
+}
+
+#events {
+  padding: 2rem 6rem;
+}
+
+.title-collection {
+  font-weight: 500;
+  font-size: 1.5rem;
+  color: #5c5b5b;
+}
+
+.value-collection {
+  margin-top: 0.5rem;
+  font-weight: 600;
+  color: #f8475e;
+  font-size: 2rem;
+}
+
+.teste {
+  width: 100%;
+}
+
 @media (max-width: 798px) {
   .container-navbar,
   .container-home,
-  #partners {
+  #partners,
+  #stats {
     padding-left: 2rem;
     padding-right: 2rem;
-  }
-
-  #partners {
-    height: auto;
   }
 }

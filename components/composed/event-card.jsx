@@ -31,10 +31,9 @@ export const EventCard = ({
          <div className="content-card mt-3">
             <h3>{title}</h3>
             <p className="description-card">{children}</p>
-            <div className="event-amount justify-content-center justify-content-md-between flex-column flex-md-row">
+            <div className="event-amount justify-content-center justify-content-md-between flex-column flex-md-row mt-2">
             <div className="valores">
-               <p>{`Meta: R$ ${goal.toFixed(2)}`}</p>
-               <p>{`Arrecadado: R$ ${donated.toFixed(2)}`}</p>
+               <p>{` R$ ${donated.toFixed(0)} / R$ ${goal.toFixed(0)}`}</p>
             </div>
                <div>Incêndios</div>
             </div>

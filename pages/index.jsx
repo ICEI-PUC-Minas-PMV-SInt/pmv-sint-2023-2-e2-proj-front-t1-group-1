@@ -4,7 +4,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { EventCard } from "@/components/composed/event-card";
 import { NewsCard } from "@/components/composed/news-card";
-import { Title } from "@/components/primitives/title/style";
+import { Title } from "@/components/primitives/title";
+import { DescriptionTitle } from "@/components/primitives/description-title";
+import { useEffect, useState } from "react";
+
 
 const Home = () => {
    return (
@@ -31,7 +34,7 @@ const Main = () => {
    return (
       <main className="container-fluid row container-home my-0 mb-5">
          <div className="my-auto col-12 col-lg-6 sm-mt-3">
-            <Title sizeFont={'3rem'}>
+            <Title sizeFont={'3rem'} ti>
                Desastres naturais não escolhem suas vítimas.
             </Title>
             <p className="description-main">
@@ -59,32 +62,86 @@ const Main = () => {
 };
 
 const Stats = () => {
+
+   const [values, setValues] = useState({});
+
    const stats = [
       {
-         icon: "/assets/icon-estatisticas-alimentos.svg",
+         icon: "/assets/comida.svg",
+         size: '80px', 
          title: "Alimentos",
-         value: "+200.000",
+         value: "2000",
       },
       {
-         icon: "/assets/icon-estatisticas-roupas.svg",
+         icon: "/assets/roupa.svg",
          title: "Roupas",
+         size: '80px', 
          value: "6000",
       },
       {
-         icon: "/assets/icon-estatisticas-medicamentos.svg",
+         icon: "/assets/medicamento.svg",
          title: "Medicamentos",
+         size: '80px', 
          value: "3697",
       },
       {
-         icon: "/assets/icon-estatisticas-construcoes.svg",
+         icon: "/assets/chapeu.svg",
          title: "Construções",
+         size: '80px', 
          value: "895",
       },
    ];
 
+   useEffect(() => {
+      const updateValues = () => {
+         setValues((prevValues) => {
+           const updatedValues = {};
+           stats.forEach((stat) => {
+             const currentValue = prevValues[stat.title.toLowerCase()] || 0;
+             const increment = 15; 
+             const newValue = Math.min(currentValue + increment, parseInt(stat.value, 10));
+             updatedValues[stat.title.toLowerCase()] = Math.round(newValue); 
+           });
+           return updatedValues;
+         });
+       };
+   
+       const intervalId = setInterval(updateValues, 100); 
+   
+       return () => clearInterval(intervalId);
+    }, [stats]);
+
    return (
-      <section id="stats" className="container-fluid py-4">
-         <div className="container-xl mx-auto row row-cols-auto justify-content-start justify-content-sm-around row-gap-3">
+      <section id="stats" className="container-fluid">
+        
+         <div className="row">
+           
+            <div className="col-md-6 my-auto">
+            <DescriptionTitle description="Mãos solidárias" />
+       
+            <Title weightFont={600} sizeFont={'2rem'} marginTop={'0'}>
+               Um pouco sobre as arrecadações
+            </Title>
+            <p>    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum tenetur corporis harum distinctio, nisi commodi incidunt perspiciatis vel, possimus voluptate reprehenderit ab perferendis obcaecati assumenda, animi magnam aliquam pariatur. Odit!
+               Accusamus veniam, nesciunt illum, laudantium impedit molestiae debitis optio architecto eligendi nulla, earum assumenda tenetur! Iure incidunt sequi alias itaque, aut aliquam doloremque ducimus molestias, impedit error perspiciatis at iusto?</p>
+           
+            </div>
+            <div className="col-md-6 d-flex flex-wrap row-gap-5">
+               
+            {stats.map((stat) => (
+        <div key={stat.title} className="col-6 ">
+          <div className="card-collection d-flex flex-column align-items-center ">
+            <img src={stat.icon} alt={stat.title} height={stat.size} />
+            <h3 className="title-collection">{stat.title}</h3>
+            <p className="value-collection">+{values[stat.title.toLowerCase()] || 0}</p>
+          </div>
+        </div>
+      ))}
+           
+            </div>
+         </div>
+        
+         {/* <div className="container-xl mx-auto row row-cols-auto justify-content-start justify-content-sm-around row-gap-3">
             {stats.map((stat) => (
                <div
                   key={stat.title}
@@ -103,7 +160,7 @@ const Stats = () => {
                   </div>
                </div>
             ))}
-         </div>
+         </div> */}
       </section>
    );
 };
@@ -169,9 +226,12 @@ const Events = () => {
    ];
 
    return (
-      <section id="events" className="container-xl mx-auto my-4">
-         <h2 className="text-center mb-4">Eventos</h2>
-         <div className="row row-cols-auto gap-4 justify-content-evenly my-5">
+      <section id="events" className="container-fluid mx-auto my-4">
+        
+         <Title weightFont={600} sizeFont={'2rem'} marginTop={'0'}>
+               Eventos
+            </Title>
+         <div className="row row-cols-auto gap-4 justify-content-around my-3 px-0">
             {events.map((event) => (
                <EventCard
                   key={event.title}
@@ -215,10 +275,13 @@ const News = () => {
 
    return (
       <section id="news" className="container-xl mx-auto mb-4">
-         <h2 className="text-center mb-4">Últimas notícias</h2>
-         <div className="d-flex flex-wrap gap-4">
+         <Title weightFont={600} sizeFont={'2rem'} marginTop={'0'}>
+         Últimas notícias
+            </Title>
+         <div className="d-flex flex-wrap gap-3">
             {news.map((news) => (
                <NewsCard
+               className='px-0'
                   key={news.title}
                   title={news.title}
                   date={news.date}
@@ -231,8 +294,8 @@ const News = () => {
             ))}
          </div>
          <div className="text-center mt-4">
-            <a href="#" className="btn btn-primary fw-600" id="ver-mais">
-               Ver mais {"->"}
+            <a href="#" className="btn btn-primary fw-700" id="ver-mais">
+               Mais notícias
             </a>
          </div>
       </section>
