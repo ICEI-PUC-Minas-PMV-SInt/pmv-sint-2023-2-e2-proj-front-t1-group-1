@@ -1,6 +1,6 @@
 import { Button } from "@/components/primitives/button";
 import { InputFloat } from "@/components/primitives/input/input";
-import { Title } from "@/components/primitives/title/style";
+import { Title } from "@/components/primitives/title";
 
 const Contato = () => {
   return (

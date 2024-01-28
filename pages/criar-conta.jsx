@@ -2,7 +2,7 @@ import React from 'react';
 import Link from "next/link";
 import { Button } from '@/components/primitives/button';
 import Image from 'next/image';
-import { Title } from "@/components/primitives/title/style";
+import { Title } from "@/components/primitives/title";
 import { InputFloat } from "@/components/primitives/input/input";
 
 
